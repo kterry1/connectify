@@ -1,0 +1,20 @@
+.NavigationMenuRoot {
+  /* background-color: lightgray; */
+}
+
+.NavigationMenuList {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  outline: none;
+  user-select: none;
+  list-style: none;
+}
+
+.NavigationMenuRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
