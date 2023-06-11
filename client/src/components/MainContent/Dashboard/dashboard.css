@@ -1,0 +1,9 @@
+.DashboardContainer {
+  width: 100%;
+  height: 100%;
+  background: brown;
+}
+
+.DashboardContainer > h1 {
+  font-weight: 600;
+}

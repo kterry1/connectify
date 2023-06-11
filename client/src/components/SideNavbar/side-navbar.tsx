@@ -1,5 +1,5 @@
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import SideNavbarVertLine from "../../assets/side-navbar-vert-line.svg";
+import { SideNavbarVertLine } from "../../assets";
 import "./side-navbar.css";
 import {
   BarChartIcon,
@@ -8,6 +8,7 @@ import {
   GearIcon,
 } from "@radix-ui/react-icons";
 import { ReactNode } from "react";
+import { NavLink } from "react-router-dom";
 
 interface SideNavbarItemProps {
   label: string;
@@ -18,13 +19,15 @@ interface SideNavbarItemProps {
 const SideNavbarItem = ({ label, icon, route }: SideNavbarItemProps) => {
   return (
     <NavigationMenu.Item className="SideNavigationMenuItem">
-      <NavigationMenu.Link
-        className="SideNavigationMenuLink"
-        href={`/${route}`}
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "active SideNavigationMenuLink" : "SideNavigationMenuLink"
+        }
+        to={`/${route}`}
       >
         {icon}
         <div className="SideNavigationMenuLinkLabel">{label}</div>
-      </NavigationMenu.Link>
+      </NavLink>
     </NavigationMenu.Item>
   );
 };
@@ -33,11 +36,7 @@ const SideNavbar = () => {
   return (
     <NavigationMenu.Root className="SideNavigationMenuRoot">
       <NavigationMenu.List className="SideNavigationMenuList">
-        <SideNavbarItem
-          label="Dashboard"
-          icon={<DashboardIcon />}
-          route="dashboard"
-        />
+        <SideNavbarItem label="Dashboard" icon={<DashboardIcon />} route="" />
         <SideNavbarItem
           label="Statistics"
           icon={<BarChartIcon />}
@@ -50,7 +49,7 @@ const SideNavbar = () => {
         />
         <SideNavbarItem label="Settings" icon={<GearIcon />} route="settings" />
       </NavigationMenu.List>
-      <img src={SideNavbarVertLine} className="SideNavbarVertLine" />
+      <SideNavbarVertLine className="SideNavbarVertLine" />
     </NavigationMenu.Root>
   );
 };
