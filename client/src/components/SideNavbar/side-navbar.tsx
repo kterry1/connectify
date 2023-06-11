@@ -1,5 +1,4 @@
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { SideNavbarVertLine } from "../../assets";
 import "./side-navbar.css";
 import {
   BarChartIcon,
@@ -49,7 +48,6 @@ const SideNavbar = () => {
         />
         <SideNavbarItem label="Settings" icon={<GearIcon />} route="settings" />
       </NavigationMenu.List>
-      <SideNavbarVertLine className="SideNavbarVertLine" />
     </NavigationMenu.Root>
   );
 };

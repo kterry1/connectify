@@ -1,9 +1,44 @@
 .DashboardContainer {
   width: 100%;
   height: 100%;
-  background: brown;
+  /* background: brown; */
 }
 
-.DashboardContainer > h1 {
+.DashboardHeading {
+  width: 100%;
+  /* background-color: purple; */
+  margin-bottom: 40px;
+}
+
+.DashboardHeading > h1 {
   font-weight: 600;
+}
+
+.DashboardButtons {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 12px;
+}
+
+.ButtonOutline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 24px;
+  background: #fff;
+  border: 1px dashed #797979;
+  border-radius: 8px;
+}
+
+.ButtonGreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 24px;
+  background: #639e7d;
+  color: #fff;
+  border-radius: 8px;
 }

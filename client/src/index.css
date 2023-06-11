@@ -22,7 +22,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  padding: 48px;
+  padding: 24px;
   width: 100vw;
   height: 100vh;
 }
@@ -63,12 +63,6 @@ a {
 #root,
 #__next {
   isolation: isolate;
-}
-
-@media screen and (max-width: 700px) {
-  body {
-    padding: 24px;
-  }
 }
 
 @media screen and (max-width: 300px) {
