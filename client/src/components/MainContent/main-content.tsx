@@ -1,16 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard/dashboard";
+import "./main-content.css";
 
 const MainContent = () => {
   return (
-    <div
-      style={{
-        padding: "32px",
-        // background: "blue",
-        width: "100%",
-        height: "100%",
-      }}
-    >
+    <div className="MainContent">
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/statistics" element={<div>Statistics</div>} />

@@ -65,6 +65,12 @@ a {
   isolation: isolate;
 }
 
+@media screen and (max-width: 450px) {
+  body {
+    padding: 16px;
+  }
+}
+
 @media screen and (max-width: 300px) {
   body {
     padding: 8px;

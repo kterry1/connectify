@@ -1,8 +1,7 @@
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import "./dashboard.css";
-type Props = {};
 
-const Dashboard = (props: Props) => {
+const Dashboard = () => {
   return (
     <div className="DashboardContainer">
       <div className="DashboardHeading">
@@ -17,6 +16,12 @@ const Dashboard = (props: Props) => {
           Sort By <ChevronDownIcon />
         </button>
         <button className="ButtonGreen">Refresh Columns</button>
+      </div>
+      <div className="CardColumnsContainer">
+        <div className="CardColumns"></div>
+        <div className="CardColumns"></div>
+        <div className="CardColumns"></div>
+        <div className="CardColumns"></div>
       </div>
     </div>
   );
