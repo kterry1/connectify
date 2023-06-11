@@ -1,3 +1,7 @@
+@import "@radix-ui/colors/blackA.css";
+@import "@radix-ui/colors/mauve.css";
+@import "@radix-ui/colors/violet.css";
+
 .DashboardContainer {
   width: 100%;
   height: 100%;
@@ -57,31 +61,53 @@
   gap: 24px;
 }
 
-.CardColumns {
+.CardColumn {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  height: 100%;
-
   border-radius: 8px;
   background: #f9faf5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+}
+
+.CardColumnHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CardList {
+  width: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-top: 24px;
+  overflow-y: auto;
+}
+
+.Card {
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(158, 99, 117, 0.25);
+  border-radius: 8px;
+  width: 100%;
+  height: 110px;
+  margin: 12px 0px;
+}
+
+@media screen and (max-width: 1100px) {
+  .CardColumnsContainer {
+    overflow: scroll;
+    flex-wrap: wrap;
+  }
+  .CardColumn {
+    width: 100%;
+    height: 500px;
+  }
 }
 
 @media screen and (max-width: 715px) {
   .ButtonGreen {
     display: none;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .CardColumnsContainer {
-    /* flex-direction: column; */
-    overflow: scroll;
-    flex-wrap: wrap;
-  }
-  .CardColumns {
-    width: 100%; /* Fill the full width in mobile layout */
-    height: 500px;
-    /* min-width: auto; Reset the minimum width */
   }
 }
 
@@ -93,4 +119,30 @@
     gap: 6px;
     padding: 4px 16px;
   }
+}
+
+@media screen and (min-width: 1600px) {
+  .CardColumn {
+    padding: 32px;
+  }
+}
+
+/* This applies to the whole webpage */
+.CardList::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+.CardList::-webkit-scrollbar-track {
+  background: #f2f3f5; /* color of the tracking area */
+}
+
+.CardList::-webkit-scrollbar-thumb {
+  background-color: #d6d5d5;
+  border-radius: 8px;
+  border: 3px solid #f2f3f5;
+}
+
+/* Add a hover effect */
+.CardList::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
 }
