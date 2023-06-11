@@ -1,0 +1,64 @@
+.SideNavigationMenuRoot {
+  width: 175px;
+  height: 100%;
+  // background-color: lightgray;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SideNavigationMenuList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  height: 100%;
+  list-style: none;
+  margin-top: 4em;
+  padding: 0;
+}
+
+.SideNavigationMenuLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  color: #000;
+}
+
+.SideNavigationMenuLink:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+.SideNavigationMenuLink:hover:after {
+  width: 100%;
+}
+
+.SideNavbarVertLine {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+@media screen and (max-width: 700px) {
+  .SideNavigationMenuRoot {
+    width: 80px;
+  }
+
+  .SideNavigationMenuLinkLabel {
+    display: none;
+  }
+
+  .SideNavigationMenuLink:after {
+    bottom: -10px;
+  }
+}

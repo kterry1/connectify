@@ -1,5 +1,5 @@
-.NavigationMenuRoot {
-  /* background-color: lightgray; */
+.TopNavigationMenuRoot {
+  // background-color: lightgray;
 }
 
 .NavigationMenuList {
@@ -11,6 +11,11 @@
   outline: none;
   user-select: none;
   list-style: none;
+}
+
+.NavigationMenuLeft {
+  display: flex;
+  align-items: center;
 }
 
 .NavigationMenuRight {

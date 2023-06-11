@@ -8,7 +8,7 @@ import Searchbar from "./Searchbar/searchbar";
 
 const TopNavbar: FC = () => {
   return (
-    <NavigationMenu.Root className="NavigationMenuRoot">
+    <NavigationMenu.Root className="TopNavigationMenuRoot">
       <NavigationMenu.List className="NavigationMenuList">
         <NavigationMenu.Item className="NavigationMenuLeft">
           <img src={CompanyLogo} alt="company logo" />
