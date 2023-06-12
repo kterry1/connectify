@@ -4,10 +4,12 @@ import {
   MobileIcon,
 } from "@radix-ui/react-icons";
 import * as Label from "@radix-ui/react-label";
+import * as Separator from "@radix-ui/react-separator";
 import "./dashboard.css";
 import { AddButton } from "../../../assets";
 import { hexToRGBA } from "../../../utils";
 import UserAvatar from "../../TopNavbar/Avatar/avatar";
+import Badge from "../../Badge/badge";
 
 interface CardProps {
   colorScheme: string;
@@ -38,6 +40,9 @@ const Card = ({ colorScheme }: CardProps) => {
           </div>
         </div>
       </div>
+      <Separator.Root className="CardSeparatorRoot" />
+      <Badge text="Product Return" />
+      <Badge text="Service Repair" color="red8" />
     </div>
   );
 };

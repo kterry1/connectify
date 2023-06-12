@@ -5,14 +5,12 @@
 .DashboardContainer {
   width: 100%;
   height: 100%;
-  /* background: brown; */
   display: flex;
   flex-direction: column;
 }
 
 .DashboardHeading {
   width: 100%;
-  /* background-color: purple; */
   margin-bottom: 40px;
 }
 
@@ -24,7 +22,6 @@
   display: flex;
   gap: 24px;
   justify-content: flex-end;
-  /* background-color: aqua; */
   width: 100%;
   font-size: 12px;
   margin-bottom: 24px;
@@ -127,6 +124,13 @@
   }
 }
 
+.CardSeparatorRoot {
+  height: 1px;
+  width: 100%;
+  margin-top: 8px;
+  background-color: #808080;
+}
+
 @media screen and (max-width: 715px) {
   .ButtonGreen {
     display: none;
@@ -164,7 +168,6 @@
   border: 3px solid #f2f3f5;
 }
 
-/* Add a hover effect */
 .CardList::-webkit-scrollbar-thumb:hover {
   background-color: #999999;
 }
