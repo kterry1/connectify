@@ -21,11 +21,11 @@
 }
 
 .SideNavigationMenuRoot::before {
-  top: -5px; /* half of the width and height */
+  top: -5px;
 }
 
 .SideNavigationMenuRoot::after {
-  bottom: -5px; /* half of the width and height */
+  bottom: -5px;
 }
 
 .SideNavigationMenuList {

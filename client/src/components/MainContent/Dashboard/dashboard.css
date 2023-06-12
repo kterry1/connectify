@@ -93,6 +93,27 @@
   height: 110px;
   margin: 16px 0px;
   margin-left: 12px;
+  padding: 8px;
+}
+
+.CardHeading {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #000;
+}
+
+.CardUserAvatar {
+  margin: 3px 0 0 3px;
+}
+
+.CardUserEmail,
+.CardUserPhone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9b9b9b;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 1100px) {

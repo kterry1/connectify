@@ -1,15 +1,13 @@
-import { ChevronDownIcon } from "@radix-ui/react-icons";
+import {
+  ChevronDownIcon,
+  EnvelopeClosedIcon,
+  MobileIcon,
+} from "@radix-ui/react-icons";
 import * as Label from "@radix-ui/react-label";
 import "./dashboard.css";
 import { AddButton } from "../../../assets";
-
-const hexToRGBA = (hex: string, opacity: number) => {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-
-  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-};
+import { hexToRGBA } from "../../../utils";
+import UserAvatar from "../../TopNavbar/Avatar/avatar";
 
 interface CardProps {
   colorScheme: string;
@@ -23,7 +21,24 @@ const Card = ({ colorScheme }: CardProps) => {
         boxShadow: `5px 10px 20px ${hexToRGBA(colorScheme, 0.15)},
     3px 6px 6px  ${hexToRGBA(colorScheme, 0.15)}`,
       }}
-    ></div>
+    >
+      <div className="CardHeading">
+        <div className="CardUserAvatar">
+          <UserAvatar avatarSize={20} fontSize={8} />
+        </div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <Label.Root className="CardUserName">Dennis Mitchell</Label.Root>
+          <div className="CardUserEmail">
+            <EnvelopeClosedIcon />
+            <Label.Root>DMitchell22@mail.com</Label.Root>
+          </div>
+          <div className="CardUserPhone">
+            <MobileIcon />
+            <Label.Root>555-324-5262</Label.Root>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -48,7 +63,7 @@ const CardColumn = ({ label, colorScheme }: CardColumnProps) => {
       <div className="CardList">
         <Card colorScheme={colorScheme} />
         <Card colorScheme={colorScheme} />
-        <Card colorScheme={colorScheme} />
+        {/* <Card colorScheme={colorScheme} /> */}
       </div>
     </div>
   );

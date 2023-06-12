@@ -21,7 +21,7 @@ const TopNavbar: FC = () => {
             <BellIcon />
           </NavigationMenu.Item>
           <NavigationMenu.Item>
-            <UserAvatar />
+            <UserAvatar avatarSize={40} fontSize={15} />
           </NavigationMenu.Item>
         </NavigationMenu.Item>
       </NavigationMenu.List>

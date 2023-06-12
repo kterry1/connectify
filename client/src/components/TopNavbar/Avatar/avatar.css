@@ -2,14 +2,9 @@
 @import "@radix-ui/colors/blue.css";
 
 .AvatarRoot {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   vertical-align: middle;
   overflow: hidden;
   user-select: none;
-  width: 40px;
-  height: 40px;
   border-radius: 100%;
   background-color: var(--blackA3);
 }
@@ -22,7 +17,7 @@
   justify-content: center;
   background-color: var(--blue6);
   color: var(--violet11);
-  font-size: 15px;
   line-height: 1;
   font-weight: 500;
+  border-radius: 50px;
 }

@@ -8,6 +8,7 @@ import {
 } from "@radix-ui/react-icons";
 import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
+import MoodToggle from "./MoodToggle";
 
 interface SideNavbarItemProps {
   label: string;
@@ -48,6 +49,7 @@ const SideNavbar = () => {
         />
         <SideNavbarItem label="Settings" icon={<GearIcon />} route="settings" />
       </NavigationMenu.List>
+      <MoodToggle />
     </NavigationMenu.Root>
   );
 };
