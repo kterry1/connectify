@@ -32,7 +32,7 @@ const Card = ({ colorScheme }: CardProps) => {
           <Label.Root className="CardUserName">Dennis Mitchell</Label.Root>
           <div className="CardUserEmail">
             <EnvelopeClosedIcon />
-            <Label.Root>DMitchell22@mail.com</Label.Root>
+            <Label.Root>DMit22@mail.com</Label.Root>
           </div>
           <div className="CardUserPhone">
             <MobileIcon />
@@ -68,7 +68,7 @@ const CardColumn = ({ label, colorScheme }: CardColumnProps) => {
       <div className="CardList">
         <Card colorScheme={colorScheme} />
         <Card colorScheme={colorScheme} />
-        {/* <Card colorScheme={colorScheme} /> */}
+        <Card colorScheme={colorScheme} />
       </div>
     </div>
   );
